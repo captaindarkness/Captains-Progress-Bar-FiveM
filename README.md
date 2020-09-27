@@ -17,7 +17,8 @@ A progress bar for GTA V FiveM which is triggered by an Action such as using the
 
 **Code Example** </br>
 ![Code Example](https://i.imgur.com/biLKfu6.png) </br>
-The Export returns a **Boolean.** </br>
+The Export returns a **Boolean.** The Two Parameters of the Export is a **STRING** and **INT**. </br>
+*(The duration (**INT**) is in seconds and not milliseconds as some others do.)*</br>
 **IF** the bool returns **TRUE** that means the bar successfully finished. Task complete. </br>
 **IF** the bool returns **FALSE** that means the bar was stop / interrupted. Task failed. </br>
 So when the Export is called store that into a varible such as in the code example -> local result. </br>
@@ -28,6 +29,8 @@ And **IF** it returned **FALSE** it wouldn't open the ATM bank UI. </br>
 </br>
 Currently the ONLY way to stop / interrupt the progress bar is with **SPACEBAR**. </br>
 *(More ways of interrupting the Progress bar can be added in the progressbar-c.lua)* </br>
+</br>
+https://streamable.com/wremi9
 </br>
 **Screenshot Examples** </br>
 ![Impound](https://i.imgur.com/D9WRgtR.png) </br>

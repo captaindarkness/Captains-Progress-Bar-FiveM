@@ -1,0 +1,37 @@
+/* background:#1b1a1a;
+background:#555; */
+
+body {
+  margin:0px;
+  font-family:"Open Sans",sans-serif;
+}
+
+#progressBar{
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  width: 200px;
+  text-align: center;
+  background-color: #555;
+  opacity: 75%;
+}
+
+#bar {
+  width: 1%;
+  height: 30px;
+  background-color: #1b1a1a;
+}
+
+#bar.active {
+  transform:scale(1);
+  transition:transform 300ms ease-in-out;
+}
+
+#label{
+  position: absolute;
+  top: -20px;
+  width: 200px;
+  text-align: center;
+  color: white;
+  opacity: 100%;
+}

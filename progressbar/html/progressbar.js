@@ -6,6 +6,7 @@ $(function () {
     var interrupting = false;
     var label = "Loading .. ";
     var duration = 10; //Seconds
+    var hidePercentageInsideBar = true // Hide the % inside theBar
 
     function display(bool) {
         if (bool) {
@@ -83,7 +84,9 @@ $(function () {
                     {
                         width++;
                         theBar.style.width = width + "%";
-                        //theBar.innerHTML = width + "%";
+                        if (!hidePercentageInsideBar) {
+                            theBar.innerHTML = width + "%";
+                        }
                     }
                 }
             }
@@ -104,7 +107,9 @@ $(function () {
     function resetBar()
     {
         theBar.style.width = 0 + "%";
-        theBar.innerHTML = 0 + "%";
+         if (!hidePercentageInsideBar) {
+            theBar.innerHTML = 0 + '%';
+        }
         theBar.style.backgroundColor = "#1b1a1a";
         $.post('https://progressbar/exit', JSON.stringify({}));
     }
